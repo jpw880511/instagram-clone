@@ -1,0 +1,30 @@
+.caption {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.tag {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.more {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  padding: 0;
+  font-size: 14px;
+}

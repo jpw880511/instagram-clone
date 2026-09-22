@@ -1,0 +1,183 @@
+.createBtn {
+  position: fixed;
+  top: calc(var(--topbar-height) + 12px);
+  right: 16px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px 8px 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .createBtn {
+    top: 20px;
+  }
+}
+
+.scroller {
+  height: calc(100vh - var(--topbar-height) - var(--bottom-nav-height));
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    height: 100vh;
+  }
+}
+
+.card {
+  position: relative;
+  height: calc(100vh - var(--topbar-height) - var(--bottom-nav-height));
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 100vh;
+  }
+}
+
+.media {
+  height: 100%;
+  max-width: 480px;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.overlayBottom {
+  position: absolute;
+  left: 16px;
+  right: 80px;
+  bottom: 24px;
+  color: #fff;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.caption {
+  font-size: 14px;
+  margin: 0;
+}
+
+.actionCol {
+  position: absolute;
+  right: 12px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionCol button {
+  background: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+}
+
+/* 댓글 시트 ------------------------------------------------ */
+.sheetBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 94;
+  background: rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: var(--bottom-nav-height);
+  height: 65vh;
+  max-width: 520px;
+  margin: 0 auto;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.sheetClosing {
+  animation: slideDown 0.25s cubic-bezier(0.4, 0, 0.8, 0.4) forwards;
+}
+
+@media (min-width: 768px) {
+  .sheet {
+    bottom: 0;
+  }
+}
+
+.sheetHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.sheetToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

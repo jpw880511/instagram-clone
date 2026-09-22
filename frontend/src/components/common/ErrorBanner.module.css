@@ -1,0 +1,29 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(237, 73, 86, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.retry {
+  background: var(--btn-danger-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-danger-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.retry:hover:not(:disabled) {
+  background: var(--btn-danger-hover);
+}
+

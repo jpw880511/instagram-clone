@@ -1,0 +1,156 @@
+.shell {
+  min-height: 100%;
+}
+
+.mobileTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topbar-height);
+  padding: 0 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+@media (min-width: 768px) {
+  .mobileTopBar {
+    display: none;
+  }
+}
+
+.mobileLogo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.mobileTopIcons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.iconWithBadge {
+  position: relative;
+  display: inline-flex;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1px 5px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.main {
+  padding-bottom: calc(var(--bottom-nav-height) + 12px);
+}
+
+/* 모바일: 알림/메시지 화면이 이전 화면 위를 덮으며 오른쪽에서 슬라이드 인 */
+.overlayPage {
+  position: fixed;
+  top: var(--topbar-height);
+  left: 0;
+  right: 0;
+  bottom: var(--bottom-nav-height);
+  z-index: 85;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--color-bg-secondary);
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+  animation: slideInRight 0.3s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.overlayClosing {
+  animation: slideOutRight 0.26s cubic-bezier(0.4, 0, 0.8, 0.4) forwards;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-left: var(--nav-width-desktop-collapsed);
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .main {
+    margin-left: var(--nav-width-desktop);
+  }
+}
+
+.sidePanel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-surface);
+  z-index: 150;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 0.25s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+@media (min-width: 768px) {
+  .sidePanel {
+    left: var(--nav-width-desktop-collapsed);
+  }
+}
+
+@media (min-width: 1264px) {
+  .sidePanel {
+    left: var(--nav-width-desktop);
+  }
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  z-index: 140;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.notifPanelBody {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.notifHeader {
+  padding: 24px 20px 12px;
+}
+
+.notifHeader h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}

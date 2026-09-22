@@ -1,0 +1,130 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--nav-width-desktop-collapsed);
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  display: none;
+  flex-direction: column;
+  padding: 12px 8px;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 1264px) {
+  .nav {
+    width: var(--nav-width-desktop);
+    padding: 12px 12px;
+  }
+}
+
+.logoWrap {
+  padding: 14px 12px 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logoFull {
+  display: none;
+}
+
+@media (min-width: 1264px) {
+  .logoFull {
+    display: inline;
+  }
+  .logoIcon {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 16px;
+  text-align: left;
+}
+
+.item:hover {
+  background: var(--color-bg-secondary);
+}
+
+.active {
+  font-weight: 700;
+}
+
+.label {
+  display: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1264px) {
+  .label {
+    display: inline;
+  }
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 12px;
+  margin-top: auto;
+  border-radius: var(--radius-md);
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 16px;
+  text-align: left;
+}
+
+.themeToggle:hover {
+  background: var(--color-bg-secondary);
+}
+
+.iconWithBadge {
+  position: relative;
+  display: inline-flex;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1px 5px;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1.4;
+}

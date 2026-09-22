@@ -1,0 +1,129 @@
+.card {
+  width: 350px;
+  max-width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 40px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputWrap {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  font-size: 12px;
+  outline: none;
+}
+
+.input:focus {
+  background: var(--color-surface);
+  border-color: var(--color-text-secondary);
+}
+
+.toggleVisibility {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.fieldError {
+  color: var(--color-danger);
+  font-size: 12px;
+  margin: 0;
+}
+
+.submitBtn {
+  margin-top: 8px;
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  font-weight: 600;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.banner {
+  color: var(--color-danger);
+  font-size: 14px;
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+.switchCard {
+  width: 350px;
+  max-width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switchCard a {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.demoHint {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 12px;
+}

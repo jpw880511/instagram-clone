@@ -1,0 +1,122 @@
+.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 24px 20px 12px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.searchBox {
+  position: relative;
+  margin: 0 20px 16px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: var(--color-text-secondary);
+}
+
+.searchBox input {
+  border: none;
+  background: none;
+  padding: 9px 0;
+  width: 100%;
+  outline: none;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 6px;
+  border: none;
+  background: var(--color-text-secondary);
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px 20px;
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.clearAll {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.clearAll:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+
+.resultRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: var(--radius-md);
+}
+
+.resultRow:hover {
+  background: var(--color-bg-secondary);
+}
+
+.resultText {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  padding: 8px;
+}
+
+.tagIcon {
+  width: var(--avatar-md);
+  height: var(--avatar-md);
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}

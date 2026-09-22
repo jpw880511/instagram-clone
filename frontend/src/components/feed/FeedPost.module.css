@@ -1,0 +1,166 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 72px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 36px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.location {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.menuWrap {
+  position: relative;
+}
+
+.moreBtn {
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 20;
+  transform-origin: top right;
+  animation: popIn 0.15s ease-out;
+  overflow: hidden;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.menu button:last-child {
+  border-bottom: none;
+}
+
+.danger {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.mediaWrap {
+  position: relative;
+}
+
+.bigHeart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  animation: pop 0.7s ease;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.body {
+  padding: 6px 12px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.viewComments {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  text-align: left;
+  padding: 0;
+}
+
+.previewComment {
+  font-size: 14px;
+  margin: 0;
+}
+
+.taggedUsers {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.taggedUsers button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.time {
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95) translateY(-4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}

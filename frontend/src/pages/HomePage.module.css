@@ -1,0 +1,128 @@
+.layout {
+  width: 100%;
+  padding: 24px 32px 0;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .layout {
+    padding: 0;
+  }
+}
+
+.feedCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedCol > * {
+  width: 100%;
+  max-width: var(--feed-width);
+}
+
+.sideCol {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  margin-left: auto;
+  position: sticky;
+  top: 24px;
+  display: none;
+}
+
+@media (min-width: 1010px) {
+  .sideCol {
+    display: block;
+  }
+}
+
+.meRow,
+.suggestedRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.meInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.meUsername {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.meFullname {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.suggested {
+  margin-top: 20px;
+}
+
+.suggestedHeader {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.followBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.followBtn:hover {
+  background: var(--btn-primary-hover);
+}
+
+.exploreLink {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.guestCard {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.guestMessage {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.guestLoginBtn {
+  display: block;
+  background: var(--color-link);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.guestSignup {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}

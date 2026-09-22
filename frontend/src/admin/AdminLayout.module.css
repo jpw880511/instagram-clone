@@ -1,0 +1,72 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-bg-secondary);
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--color-text);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.navItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: inherit;
+  opacity: 0.75;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navItem:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navItemActive {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 40px;
+}

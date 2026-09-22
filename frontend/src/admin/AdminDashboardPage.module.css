@@ -1,0 +1,104 @@
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.loading,
+.error {
+  color: var(--color-text-secondary);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardValue {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.cardLabel {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.chartCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chartTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 140px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.barTrack {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: var(--color-bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  width: 100%;
+  background: var(--color-link);
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.2s ease;
+}
+
+.barValue {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.barLabel {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}

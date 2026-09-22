@@ -1,0 +1,164 @@
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.searchRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.searchRow input,
+.searchRow select {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.searchRow input {
+  flex: 1;
+  min-width: 160px;
+  max-width: 260px;
+}
+
+.searchRow button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.searchRow .resetBtn {
+  background: none;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.error {
+  color: var(--color-danger);
+  margin-bottom: 12px;
+}
+
+.tableWrap {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 14px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.sortableTh {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortableTh:hover {
+  color: var(--color-text);
+}
+
+.sortArrow {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--color-link);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--color-bg-secondary);
+  display: block;
+}
+
+.captionCell {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emptyRow {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: 32px !important;
+}
+
+.dangerBtn {
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  background: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dangerBtn:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.dangerBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

@@ -1,0 +1,11 @@
+.wrap {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    padding: 4px;
+  }
+}

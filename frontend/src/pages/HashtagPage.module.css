@@ -1,0 +1,21 @@
+.wrap {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}

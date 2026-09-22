@@ -1,0 +1,230 @@
+.selectStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  border: 2px dashed transparent;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.dragActive {
+  border-color: var(--color-link);
+  background: var(--color-bg-secondary);
+}
+
+.bigIcon {
+  color: var(--color-text);
+}
+
+.pickBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.editStep {
+  display: flex;
+  height: 70vh;
+  max-height: 600px;
+}
+
+.previewCol {
+  flex: 1.3;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed transparent;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.editDragActive {
+  border-color: var(--color-link);
+}
+
+.previewMain {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.previewMedia {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.removeMainBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbRow {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.thumbItem {
+  position: relative;
+  flex-shrink: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  transition: opacity 0.15s ease;
+}
+
+.thumbDragging {
+  opacity: 0.35;
+}
+
+.thumbItem img,
+.thumbItem video {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.addMoreBtn {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  background: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbItem button {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formCol {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.formCol textarea,
+.formCol input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  resize: none;
+  outline: none;
+}
+
+.tagField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tagChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px 6px 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+.tagChip button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: 13px;
+  margin: 0;
+}
+
+.actionsRow {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.actionsRow button {
+  flex: 1;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.shareBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border) !important;
+  border-radius: var(--radius-sm);
+  padding: 4px 14px;
+  font-weight: 600;
+}
+
+.shareBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.shareBtn:disabled {
+  opacity: 0.6;
+}

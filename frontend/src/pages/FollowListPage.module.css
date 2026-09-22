@@ -1,0 +1,73 @@
+.wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.header {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.filterInput {
+  margin: 12px 16px;
+  width: calc(100% - 32px);
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.info span {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.followBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.followBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.followBtn.following {
+  background: var(--btn-muted-bg);
+  border-color: var(--btn-muted-border);
+}
+
+.followBtn.following:hover:not(:disabled) {
+  background: var(--btn-muted-hover);
+}

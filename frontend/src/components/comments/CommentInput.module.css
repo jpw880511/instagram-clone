@@ -1,0 +1,67 @@
+.form {
+  border-top: 1px solid var(--color-border);
+  padding: 10px 12px;
+}
+
+.replyBanner {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.replyBanner button {
+  background: var(--btn-muted-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-muted-border);
+  border-radius: var(--radius-sm);
+  padding: 2px 10px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.replyBanner button:hover:not(:disabled) {
+  background: var(--btn-muted-hover);
+}
+
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputRow textarea {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-radius: 999px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.4;
+  max-height: 80px;
+  padding: 9px 16px;
+  font-family: inherit;
+}
+
+.postBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.postBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.postBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

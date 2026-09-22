@@ -1,0 +1,13 @@
+@echo off
+chcp 65001 >nul
+cd /d "%~dp0"
+
+where node >nul 2>nul
+if errorlevel 1 (
+    echo [dev] Node.js 가 설치되어 있지 않습니다. https://nodejs.org 에서 설치 후 다시 실행하세요.
+    pause
+    exit /b 1
+)
+
+node scripts\dev.mjs
+pause

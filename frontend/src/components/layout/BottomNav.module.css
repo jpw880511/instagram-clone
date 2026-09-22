@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-height);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+.item,
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  padding: 6px 12px;
+}
+
+.active {
+  color: var(--color-text);
+}
+
+.active svg {
+  stroke-width: 2.6;
+}

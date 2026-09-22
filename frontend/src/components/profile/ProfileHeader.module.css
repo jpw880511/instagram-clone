@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  gap: 24px;
+  padding: 24px 20px;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+.avatarCol {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  /* Avatar의 .xl 클래스는 CSS 모듈 해시라 직접 못 잡으므로 크기 변수를 덮어쓴다 */
+  .avatarCol {
+    --avatar-xl: 77px;
+  }
+}
+
+.infoCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.username {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.editBtn,
+.followBtn,
+.followingBtn,
+.messageBtn {
+  white-space: nowrap;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid var(--btn-muted-border);
+  background: var(--btn-muted-bg);
+  color: var(--btn-text);
+  transition: background-color 0.15s ease;
+}
+
+.editBtn:hover,
+.followingBtn:hover:not(:disabled) {
+  background: var(--btn-muted-hover);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.followBtn,
+.messageBtn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-border);
+}
+
+.followBtn:hover:not(:disabled),
+.messageBtn:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.stats {
+  display: flex;
+  gap: 28px;
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+
+.stats strong {
+  font-weight: 600;
+}
+
+.bio {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bio p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.website {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    gap: 0;
+    justify-content: space-around;
+    flex: 1;
+  }
+  .stats li,
+  .stats li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .topRow {
+    order: 2;
+    width: 100%;
+  }
+}
